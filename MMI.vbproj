@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2A97B0E-F5F8-4652-BC61-6E13D065A8B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MMI.My.MyApplication</StartupObject>
+    <RootNamespace>MMI</RootNamespace>
+    <AssemblyName>MMI</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>MaintenanceMaterialInformatique.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MMI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MMI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cellule.Designer.vb">
+      <DependentUpon>cellule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cellule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImprimerInterventionParSociete.Designer.vb">
+      <DependentUpon>FrmImprimerInterventionParSociete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImprimerInterventionParSociete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInterventionParReparateur.Designer.vb">
+      <DependentUpon>FrmInterventionParReparateur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInterventionParReparateur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimerInterventionParReparateur.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImprimerInterventionParReparateur.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImprimerInterventionParSociete.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImprimerInterventionParSociete.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Intervention3.Designer.vb">
+      <DependentUpon>Intervention3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Intervention3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeIntervention.Designer.vb">
+      <DependentUpon>ListeIntervention.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeIntervention.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListePannes.Designer.vb">
+      <DependentUpon>ListePannes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListePannes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeCellule.Designer.vb">
+      <DependentUpon>ListeCellule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeCellule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeLogiciels.Designer.vb">
+      <DependentUpon>ListeLogiciels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeLogiciels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeMaterial.Designer.vb">
+      <DependentUpon>ListeMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListePieces.Designer.vb">
+      <DependentUpon>ListePieces.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListePieces.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeReparateur.Designer.vb">
+      <DependentUpon>ListeReparateur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeReparateur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeService.Designer.vb">
+      <DependentUpon>ListeService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeSocietés.Designer.vb">
+      <DependentUpon>ListeSocietés.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeSocietés.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeUtilisateur.Designer.vb">
+      <DependentUpon>ListeUtilisateur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListeUtilisateur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logiceil.Designer.vb">
+      <DependentUpon>Logiceil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logiceil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material.Designer.vb">
+      <DependentUpon>Material.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="Mtr.Designer.vb">
+      <DependentUpon>Mtr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mtr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Panne.Designer.vb">
+      <DependentUpon>Panne.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panne.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pieces.Designer.vb">
+      <DependentUpon>Pieces.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pieces.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reparateur.Designer.vb">
+      <DependentUpon>Reparateur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reparateur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service.Designer.vb">
+      <DependentUpon>Service.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Service.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Societé.Designer.vb">
+      <DependentUpon>Societé.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Societé.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilisateur.Designer.vb">
+      <DependentUpon>Utilisateur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utilisateur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cellule.resx">
+      <DependentUpon>cellule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImprimerInterventionParSociete.resx">
+      <DependentUpon>FrmImprimerInterventionParSociete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInterventionParReparateur.resx">
+      <DependentUpon>FrmInterventionParReparateur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimerInterventionParReparateur.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ImprimerInterventionParReparateur.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimerInterventionParSociete.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ImprimerInterventionParSociete.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intervention3.resx">
+      <DependentUpon>Intervention3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeIntervention.resx">
+      <DependentUpon>ListeIntervention.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListePannes.resx">
+      <DependentUpon>ListePannes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeCellule.resx">
+      <DependentUpon>ListeCellule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeLogiciels.resx">
+      <DependentUpon>ListeLogiciels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeMaterial.resx">
+      <DependentUpon>ListeMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListePieces.resx">
+      <DependentUpon>ListePieces.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeReparateur.resx">
+      <DependentUpon>ListeReparateur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeService.resx">
+      <DependentUpon>ListeService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeSocietés.resx">
+      <DependentUpon>ListeSocietés.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeUtilisateur.resx">
+      <DependentUpon>ListeUtilisateur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logiceil.resx">
+      <DependentUpon>Logiceil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material.resx">
+      <DependentUpon>Material.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mtr.resx">
+      <DependentUpon>Mtr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panne.resx">
+      <DependentUpon>Panne.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pieces.resx">
+      <DependentUpon>Pieces.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reparateur.resx">
+      <DependentUpon>Reparateur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service.resx">
+      <DependentUpon>Service.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Societé.resx">
+      <DependentUpon>Societé.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilisateur.resx">
+      <DependentUpon>Utilisateur.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MaintenanceMaterialInformatique.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
